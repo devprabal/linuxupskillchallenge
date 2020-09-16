@@ -3,7 +3,7 @@
 ## Info
 
 (will act as **remote**) VirtualBox Ubuntu Server 20.04
- - hostname: `ariana`
+ - hostname: `Ariana`
  - login/user: `haiji`
  - ip: `192.168.225.26`
 
