@@ -19,3 +19,7 @@ I wanted a simple way to know if I am inside a git directory or not and nothing 
 - [x] [PS1,2,3,4, PROMPT_COMMAND](http://www.thegeekstuff.com/2008/09/bash-shell-take-control-of-ps1-ps2-ps3-ps4-and-prompt_command/)
 - [x] [Customizing the prompt PS1](https://www.thegeekstuff.com/2008/09/bash-shell-ps1-10-examples-to-make-your-linux-prompt-like-angelina-jolie/) But I would suggest and likely follow (1) The linux command line book for colors etc (2) arch wiki for embedding commands.
 - [x] [basic commands](https://www.thegeekstuff.com/2008/09/bash-shell-ps1-10-examples-to-make-your-linux-prompt-like-angelina-jolie/) Again, I will strongly suggest **the linux command line book** by *William Shotts* and some of *Luke Smith's* videos.
+- [ ] [Explore the Linux file system](https://www.digitalocean.com/community/tutorials/how-to-use-cd-pwd-and-ls-to-explore-the-file-system-on-a-linux-server)
+- [ ] [Linux File System](https://www.youtube.com/watch?v=2qQTXp4rBEE)
+- [ ] [Simple Terminal Commands on Ubuntu](http://www.youtube.com/watch?v=CGBsurVdLGY)
+- [ ] [Solaris Unix Commands](http://www.gsp.com/support/virtual/admin/unix/solaris/commands.html)

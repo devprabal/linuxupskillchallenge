@@ -60,9 +60,11 @@ ut/event0 (Power Button)
 > On AWS EC2, you will find that all of your password hashes in `/etc/shadow` are `*` or `!` I've read that `*` means that the user is completely disabled for login. `!` indicates the user has never been given a password, which is the case for the `ubuntu` account. If you'd like you can set a password with `sudo passwd ubuntu`. If you look at `/etc/shadow` afterwards you will see a proper hash.
 >> though I cannot experiment with that because I don't have an aws ec2.
 
-- `sudo -i` will use home dir as `/root` and will not be corrupted by user's env variables. However, `sudo -s` will use user's home dir (example, /home/devpogi) and will have user's env variables. Both will have root's PATH.
+- ~~`sudo -i` will use home dir as `/root` and will not be corrupted by user's env variables. However, `sudo -s` will use user's home dir (example, /home/devpogi) and will have user's env variables. Both will have root's PATH.~~
 
-> What's worth keeping in mind here is that the `-s` command line option gives you a shell with root privileges, but you don't get the root environment - it's your `.bashrc` that gets sourced. This means that, for example, in the new shell that `sudo -s` runs, executing the whoami command will still return your username, and not 'root'.
+- ~~What's worth keeping in mind here is that the `-s` command line option gives you a shell with root privileges, but you don't get the root environment - it's your `.bashrc` that gets sourced. This means that, for example, in the new shell that `sudo -s` runs, executing the whoami command will still return your username, and not 'root'.~~
+
+> `sudo -s` gave me root on `whoami` and gave me `/root` on `echo $HOME`, I am not sure about which `.bashrc` got sourced, but instead of changing to `/root`, it remained at the last working dir (i.e. the dir before execution of `sudo -s` command).
 
 - sudo session remains active for 15-mins by default. Suppose during this session, you have to give someone access to your terminal, but you don't want them to be able to use sudo. What will you do? `sudo -k` is used to revoke root privileges, and will prompt for password at the next occurence of sudo.
  
@@ -75,3 +77,12 @@ ut/event0 (Power Button)
 - [x] [How to use sudo](https://www.howtoforge.com/tutorial/sudo-beginners-guide/)
 - [x] [This is how password cracking is done](https://null-byte.wonderhowto.com/how-to/crack-shadow-hashes-after-getting-root-linux-system-0186386/)
 
+## Questions And Answers
+
+[discord exported messages](assets/day3_questions-discord.html)
+
+**Summary**: 
+- Use sudo prefixed commands instead of logging into a temporary root shell with `sudo -i`. 
+- Create a shell script if I need to do a series of sudo commands, this will save from errors (when directly writing sudo in terminal)
+- I can copy `~/.bashrc` to `/root/.bashrc` but it is not best practice to use the root login shell.
+- Again, I can login from tty with root account (remember the `!` in encrypted password field in `/etc/shadow`) but that is not preferred.

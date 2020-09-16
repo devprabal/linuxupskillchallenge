@@ -33,6 +33,15 @@ This gave me IP of 192.168.225.26 (found using `ip a` or `ifconfig` in the **ine
 
 - [ ] Configuring ssh client (*Pavilion*, in this case?) for fonts and fg/bg colors, PS1, etc. 
 
+## Readings
+
+- [ ] [SSH Tunneling](https://linuxize.com/post/how-to-setup-ssh-tunneling/)
+- [ ] [Password-less SSH login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)
+- [ ] [SSH client configuration](https://linuxize.com/post/using-the-ssh-config-file/)
+
+- [ ] [Using PuTTY for SSH (Windows)](http://kb.mediatemple.net/questions/1595/Using+SSH+in+PuTTY+%28Windows%29#gs )
+- [ ] [Comparing CENTOS and Ubuntu for servers](http://serverfault.com/questions/53954/centos-vs-ubuntu)
+- [ ] [A Beginners Guide to SSH](https://www.youtube.com/watch?v=qWKK_PNHnnA)
  
 ## Questions and Answers
 
@@ -50,4 +59,6 @@ This gave me IP of 192.168.225.26 (found using `ip a` or `ifconfig` in the **ine
 - Why don't we get attacked on cellular mobile data?
 
 > Um, your phone won't have any "open ports"?
+
+
 
