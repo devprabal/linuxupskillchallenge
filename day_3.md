@@ -79,7 +79,9 @@ ut/event0 (Power Button)
 
 ## Questions And Answers
 
-[discord exported messages](assets/day3_questions-discord.html)
+[view discord exported messages as html (in discord default theme)](https://htmlpreview.github.io/?https://github.com/devprabal/linuxupskillchallenge/blob/master/assets/day3_questions-discord.html)
+
+[discord exported messages (html text, not rendered)](assets/day3_questions-discord.html)
 
 **Summary**: 
 - Use sudo prefixed commands instead of logging into a temporary root shell with `sudo -i`. 
