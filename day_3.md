@@ -1,5 +1,7 @@
 # Day 3
 
+- [x] Changed the hostname by editing `/etc/hostname` and `/etc/hosts`
+
 ## Info
 
 (will act as **remote**) VirtualBox Ubuntu Server 20.04
@@ -41,8 +43,6 @@ Sep  7 15:38:50 ariana systemd-logind[649]: New seat seat0.
 Sep  7 15:38:50 ariana systemd-logind[649]: Watching system buttons on /dev/inp
 ut/event0 (Power Button)
 ```
-
-- [x] Changed the hostname by editing `/etc/hostname` and `/etc/hosts`
 
 - [x] Saw `/etc/shadow` file and read a little about `crypt` and `shadow` from the man pages. Saw the encrypted password for *haiji* user.
 
