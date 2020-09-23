@@ -1,6 +1,6 @@
 # Day 12
 
-# Notes
+## Notes
 
 - [x] It appears that `sftp` (I used the cli, from OpenSSH) is pretty useful over `scp` because `scp` closes the session after each file transfer.
 - However, we cannot delete a dir which contains subdirs or is not empty because `sftp` doesnot provide `rm -r` option. A workaround this would be to first delete all file `rm newdir/*` and then delete the dir `rmdir newdir`.
@@ -10,7 +10,9 @@
   - `:sh` and then `exit`
   - <kbd>Ctrl</kbd>+z and then `fg`, to suspend vim and bring it to foreground respectively.
 
-# Readings
+- [x] `sftp` from nautilus also works great.
+
+## Readings
 
 - [ ] CyberDuck (http://cyberduck.io/)
 - [ ] FileZilla (http://filezilla-project.org/download.php?type=client)
