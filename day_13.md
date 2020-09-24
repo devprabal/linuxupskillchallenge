@@ -24,6 +24,22 @@ Sep 23 12:49:05 Ariana sudo:     fred : user NOT in sudoers ; TTY=pts/0 ; PWD=/h
 
 A new user **fred** has been added to *Ariana*  and they are a member of groups **fred** and **sudo** (not **adm**).
 
+## Questions and Answers
+
+[reddit link](https://www.reddit.com/r/linuxupskillchallenge/comments/ixwvq4/thoughts_and_comments_day_13/g6ap7b6?utm_source=share&utm_medium=web2x&context=3)
+
+I don't see a difference if the perm is -r--r----- or -rw-r----- I can always overwrite the file with :w! in vim. Since I can read the file as well therefore the previous content doesn't get lost. This is in contrast to permission 000 where the previous content would get lost if we try to write a file forcefully with :w! in vim (because we could not read the contents too).
+
+Please tell me where I am wrong in this interpretation?
+
+> Yes, but this is a special feature of vim - and even in that case a simple _:w_ will fail with an error message (prompting you that you can use "!") - AND this only works because as owner of the file, you have "the permission to override permissions" in this case.
+> Thanks for the question - I've updated the notes based on this feedback)
+
+## Inspiration
+
+![the above question led to the following contribution](assets/contribution.png)
+[github link](https://github.com/snori74/linuxupskillchallenge/commit/f821ea9f5d88b716f8d7ce73df9f58166e9c5329)
+
 ## Readings
 
 - [ ] `umask`
@@ -35,3 +51,4 @@ A new user **fred** has been added to *Ariana*  and they are a member of groups 
 - [ ] [File Security](http://tldp.org/LDP/intro-linux/html/sect_03_04.html)
 - [ ] [chmod Tutorial](http://catcode.com/teachmod/)
 - [ ] [File and Directory Permissions](http://www.youtube.com/watch?v=vKTg1ATHl4E)
+
