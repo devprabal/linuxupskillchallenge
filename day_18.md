@@ -3,10 +3,10 @@
 ## Notes
 
 - `logrotate --debug /etc/logrotate.conf` gives dump of what actually will be performed without actually performing it. So it becomes handy for testing the configuration changes made to `/etc/logrotate.d/apache2`
-- Apparently, `logrotate` is handled by systemd timer (see `systemctl status logrotate`, and `systemctl status logrotate.timer`) instead of `cron` (see `less /etc/cron.daily/logrotate` which has a line **skip in favour of systemd timer).
+- Apparently, `logrotate` is handled by systemd timer (see `systemctl status logrotate`, and `systemctl status logrotate.timer`) instead of `cron` (see `less /etc/cron.daily/logrotate` which has a line *skip in favour of systemd timer*).
 - [x] `/etc/logrotate.d/apache2` already had **daily** in it so I changed the no.of copies it keeps to 10 from 12 and compression from default (gzip) to bzip2
 
-#### **`/etc/logrotate.d/apache2`**
+##### **`/etc/logrotate.d/apache2`**
 ```text 
 /var/log/apache2/*.log {
         daily
@@ -20,7 +20,7 @@
 - [x] Created a file `/var/log/mylogfile.log`, changed its perm to **-rw-r--r-- root adm** and `echo`ed some text into it. (Making a secret dir like this is soo cool, just change the perm to *710 root normaluser*).
 - [x] Created corresponding logrotate config for the above file
 
-#### **`/etc/logrotate.d/mylogfile`**
+##### **`/etc/logrotate.d/mylogfile`**
 ```text
 /var/log/mylogfile.log {
         size 2
