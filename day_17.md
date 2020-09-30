@@ -36,7 +36,9 @@ Compiled without: openssl libssh2
 Available nsock engines: epoll poll select
 ```
 
-But, `nmap -V` returns the one from `/usr/bin/nmap`
+~~But, `nmap -V` returns the one from `/usr/bin/nmap`~~
+
+I don't know why it returned different once, but now it returns from the `/usr/local/bin/nmap`.
 
 ## Questions and Answers
 
@@ -49,6 +51,16 @@ cd /usr/bin
 sudo mv nmap nmap.bak
 sudo ln -s /usr/local/bin/nmap nmap
 ```
+
+> You shouldn't do this - "which nmap" should show that the version that you've just installed will load in preference to the default.
+
+- [Effect of compiling from source on already installed applications](https://unix.stackexchange.com/questions/46656/effect-of-compiling-from-source-on-already-installed-applications/46658)
+
+**Takeaways -**
+
+- The prefixes `/usr/local/` should be before `/usr/` in the `PATH` variable. Both of which should be before, `/bin` prefixes. The first match to the binary is returned (with `which` command, for example), so this makes sense.
+- Apparently, there is no way to keep track of the packages installed from source for updates. (unless the package itself has some option of doing it, like masterpdfeditor notifies for an update available)
+- You can also run the non-default (as in PATH ) version of the software you want from `/usr/bin` by running it like `/usr/bin/nmap -V`, etc.
 
 ## Readings
 
