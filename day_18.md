@@ -42,6 +42,8 @@ sudo logrotate /etc/logrotate.d/mylogfile
 
 This will create `/var/log/mylogfile.log.1.bz2` with the contents from `/var/log/mylogfile.log` and truncate the later to 0. You can view the former by `less` or `zless`.
 
+- [x] Seen `/var/log/apache2/` for the logs the next day, they had changed extensions, as expected.
+
 ## Readings
 
 - [x] [Use logrotate to Manage Log Files ](http://library.linode.com/linux-tools/utilities/logrotate)

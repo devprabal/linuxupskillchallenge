@@ -79,11 +79,19 @@ ut/event0 (Power Button)
 
 ## Questions And Answers
 
-[view discord exported messages as html (in discord default theme)](https://htmlpreview.github.io/?https://github.com/devprabal/linuxupskillchallenge/blob/master/assets/day3_questions-discord.html)
+[View the discussion as html page (in discord default theme)](https://htmlpreview.github.io/?https://github.com/devprabal/linuxupskillchallenge/blob/master/assets/day3_questions-discord.html)
+
+> generated using [DiscordChatExporter](https://github.com/Tyrrrz/DiscordChatExporter)
+
+<details>
+<summary> plain html text </summary>
 
 [discord exported messages (html text, not rendered)](assets/day3_questions-discord.html)
 
-**Summary**: 
+</details>
+
+
+**Takeaways**: 
 - Use sudo prefixed commands instead of logging into a temporary root shell with `sudo -i`. 
 - Create a shell script if I need to do a series of sudo commands, this will save from errors (when directly writing sudo in terminal)
 - I can copy `~/.bashrc` to `/root/.bashrc` but it is not best practice to use the root login shell.
