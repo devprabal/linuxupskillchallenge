@@ -15,89 +15,18 @@ home/haiji
 └── test
 ```
 
-<details>
-    <summary>See it formatted in html</summary>
+`ls -ild` in home/haiji gives me - 
 
-<html>
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <meta name="Author" content="Made by 'tree'">
- <meta name="GENERATOR" content="$Version: $ tree v1.8.0 (c) 1996 - 2018 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
- <title>haiji's dir</title>
- <style type="text/css">
-  <!--
-  BODY { font-family : ariel, monospace, sans-serif; }
-  P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
-  B { font-weight: normal; color: black; background-color: transparent;}
-  A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
-  A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
-  A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
-  A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
-  .VERSION { font-size: small; font-family : arial, sans-serif; }
-  .NORM  { color: black;  background-color: transparent;}
-  .FIFO  { color: purple; background-color: transparent;}
-  .CHAR  { color: yellow; background-color: transparent;}
-  .DIR   { color: blue;   background-color: transparent;}
-  .BLOCK { color: yellow; background-color: transparent;}
-  .LINK  { color: aqua;   background-color: transparent;}
-  .SOCK  { color: fuchsia;background-color: transparent;}
-  .EXEC  { color: green;  background-color: transparent;}
-  -->
- </style>
-</head>
-<body>
-	<h1>haiji's dir</h1><p>
-	<b class="NORM">/home</b><br>
-	└── <b class="DIR">haiji</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="DIR">.cache</b><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <b class="DIR">mc</b><br>
-	&nbsp;&nbsp;&nbsp; │   └── <b class="NORM">motd.legal-displayed</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="DIR">.config</b><br>
-	&nbsp;&nbsp;&nbsp; │   └── <b class="DIR">mc</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="DIR">.local</b><br>
-	&nbsp;&nbsp;&nbsp; │   └── <b class="DIR">share</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="DIR">.ssh</b><br>
-	&nbsp;&nbsp;&nbsp; │   └── <b class="NORM">known_hosts</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="DIR">test</b><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <b class="NORM">dummy</b><br>
-	&nbsp;&nbsp;&nbsp; │   └── <b class="NORM">new</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">attackers.txt</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">attackingips.txt</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">.bash_history</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">.bash_logout</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">.bashrc</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">dummytext.txt</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">.lesshst</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">link1</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">link2</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="EXEC">newfile.tst</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">perms</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">perm.txt</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">.profile</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">.sudo_as_admin_successful</b><br>
-	&nbsp;&nbsp;&nbsp; ├── <b class="NORM">.viminfo</b><br>
-	&nbsp;&nbsp;&nbsp; └── <b class="NORM">.wget-hsts</b><br>
-	<br><br>
-	</p>
-	<p>
+```
+264604 drwxr-xr-x 7 haiji haiji 4096 Oct  1 14:03 .
+```
 
-9 directories, 20 files
-	<br><br>
-	</p>
-	<hr>
-	<p class="VERSION">
-        <code>tree  --dirsfirst -L 3 -a -I fred -H /home -T "haiji's dir" -C --nolinks</code><br>
-		 tree v1.8.0 © 1996 - 2018 by Steve Baker and Thomas Moore <br>
-		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
-		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
-		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
-	</p>
-</body>
-</html>
+The number of hard links are 7 for this dir. This is because, all of the below point to the same thing, 
 
-</details>
-
-
+1. `home` will have the dir `haiji`
+2. `haiji` will have a dir `.`
+3. `.cache`, `.config`, `.local`, `.ssh` will have a dir `..`
+4. `test` will have a dir `..`
 
 ## Readings
 
