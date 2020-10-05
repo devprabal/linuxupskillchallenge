@@ -53,7 +53,9 @@ fi
 ```
 
 
-## Questions and Answers
+## Questions and Answers and Inspiration
+
+[reddit link](https://www.reddit.com/r/linuxupskillchallenge/comments/j3g2s0/thoughts_and_comments_day_20/g7hrqii?utm_source=share&utm_medium=web2x&context=3)
 
 I don't think "**disconnected from**" gives the desired result, (at least not in my case). 
 
@@ -62,6 +64,10 @@ A "good" (accepted password) session only has "Disconnected from" line in my log
 "**Failed password**" [log](https://pastebin.com/yp4eVJmK), "**Invalid user**" [log](https://pastebin.com/mt1WN6Kk) shows me "bad" logins.
 
 Failed but accepted on third attempt - [log](https://pastebin.com/xWY5uNq7)
+
+> **Great script**. It's well worthwhile spending some time checking exactly whats in the logs - and interesting to differentiate between "failed root", versus "failed non-existant user" etc. as you've done.
+>
+> If you look at the Apache logs you'll see a whole range of attempted attacks against all sorts of vulnerabilities they're hoping to find.
 
 ## Readings
 
