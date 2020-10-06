@@ -34,6 +34,12 @@ grep -R -i "delaycompress" /etc/* 2>&1 | grep -vi "Permission denied"
 
 - [ ] Know to use `-exec` option of `find` command.
 
+## Inspiration
+
+My [pull request](https://github.com/snori74/linuxupskillchallenge/commit/fb953c451a0a69eba6cbed7749dedf3bff77debf) (on the above discussion of filtering out errors from `find` with `grep`) was merged. I am so happy. :star_struck:
+
+![see a screenshot, :stuck_out_tongue_closed_eyes:](assets/day_11_pull_request_merged.png)
+
 ## Readings
 
 - [ ] [25 find command examples...](https://www.linuxtechi.com/25-find-command-examples-for-linux-beginners/)
