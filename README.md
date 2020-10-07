@@ -1,17 +1,5 @@
-My progress on [r/linuxupskillchallenge](https://www.reddit.com/r/linuxupskillchallenge/)
+My progress on [r/linuxupskillchallenge](www.reddit.com/r/linuxupskillchallenge) using [AWS](aws) and [VirtualBox](VirtualBox).
 
----
+The [VirtualBox](VirtualBox) dir contains more details on tasks for each day and it was the first time I had taken the course. So, I recommend viewing the files therein first. 
 
-## Info
-
-(will act as **remote**) VirtualBox Ubuntu Server 20.04
- - hostname: `Ariana`
- - login/user: `haiji`
- - ip: `192.168.225.26`
-
-(will act as **local**) Host Machine Ubuntu Desktop 20.04
- - hostname: `Pavilion`
- - login/user: `devpogi`
- - ip: `192.168.225.44`
-
----
+The [AWS](aws) dir only has some important points while revisiting the course with a cloud server.

@@ -14,10 +14,10 @@ clientip=$(curl --silent ipinfo.io/ip)
 if [[ -z "$severip" ]]; then
 	usage
 else
-	if [[ -f "../aws-ip" ]]; then
+	if [[ -f "../aws/aws-ip" ]]; then
 		echo "$timestamp" "$severip" "$clientip" >> aws-ip
 	else
-		echo 'create a file named aws-ip in the parent dir ( ../ ) to this script'
+		echo 'create a file named aws-ip in the dir ( ../aws/ ) to this script'
 	fi
 fi
 
