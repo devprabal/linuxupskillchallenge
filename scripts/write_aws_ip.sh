@@ -11,7 +11,7 @@ else
 	if [[ -f "../aws-ip" ]]; then
 		echo "$timestamp" "$1" >> aws-ip
 	else
-		echo "create a file named aws-ip"
+		echo 'create a file named aws-ip in the parent dir ( ../ ) to this script'
 	fi
 fi
 
